@@ -1,0 +1,52 @@
+[
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "core",
+    "section": "",
+    "text": "source\n\nClient.main\n\n Client.main (endpoint, csv_path, identity, credential, property_id=10)\n\n*Main method to run the client operations.\nArgs: endpoint (str): API endpoint. csv_path (str): Path to the CSV file. property_id (int): Property ID to query. identity (str): Identity for API access. credential (str): Credential for API access.*\n\nsource\n\n\nClient.load_env\n\n Client.load_env (path)\n\n*Load environment variables from a .env file.\nArgs: path (str): Path to the .env file.\nReturns: tuple: Base URL, identity, and credential from the environment variables.*\n\nsource\n\n\nClient\n\n Client (identity, credential)\n\n*Initialize the Client instance.\nArgs: identity (str): Identity for API access. credential (str): Credential for API access.*\n\nsource\n\n\nClient.download\n\n Client.download (endpoint, csv_path, property_id=10, debug=False)\n\n*Download item JSON data from the endpoint and check for missing media.\nArgs: endpoint (str): API endpoint. csv_path (str): Path to the CSV file. property_id (int): Property ID to query. debug (bool, optional): Flag to enable debug mode. Defaults to False.*\n\nsource\n\n\nClient.analyze\n\n Client.analyze ()\n\nAnalyze the downloaded JSON data to find missing media items and save the results to a CSV file.\n\nsource\n\n\nClient.delete\n\n Client.delete ()\n\nDelete media items from the Omeka server that are listed as missing.\n\nsource\n\n\nClient.upload\n\n Client.upload (debug=False, loop=5, property_source=11)\n\n*Upload missing media items back to the Omeka server.\nArgs: debug (bool, optional): Flag to enable debug mode. Defaults to False. loop (int, optional): Number of retry attempts for failed uploads. Defaults to 5. property_source (int, optional): Property source for the media items. Defaults to 11.*",
+    "crumbs": [
+      "core"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "omeka-iiif-uploader",
+    "section": "",
+    "text": "This is a simple Python script that uploads images to an Omeka S instance using the IIIF API.",
+    "crumbs": [
+      "omeka-iiif-uploader"
+    ]
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "omeka-iiif-uploader",
+    "section": "Install",
+    "text": "Install\npip install git+https://github.com/nakamura196/omeka_iiif_uploader.git",
+    "crumbs": [
+      "omeka-iiif-uploader"
+    ]
+  },
+  {
+    "objectID": "index.html#data",
+    "href": "index.html#data",
+    "title": "omeka-iiif-uploader",
+    "section": "Data",
+    "text": "Data\n\n\n\n\n\n\n\no:item\niiif\n\n\n\n\npost_226\nhttps://nakamura196.github.io/iiif_static/files/tile/kunshujo/info.json",
+    "crumbs": [
+      "omeka-iiif-uploader"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "omeka-iiif-uploader",
+    "section": "How to use",
+    "text": "How to use\nfrom omeka_iiif_uploader.core import Client\nendpoint, identity, credential = Client.load_env(\"../.env\")\n\nproperty_id = 10\ncsv_path = \"../tmp/data.csv\"\n\nClient.main(endpoint, csv_path, identity, credential, property_id=property_id)",
+    "crumbs": [
+      "omeka-iiif-uploader"
+    ]
+  }
+]
