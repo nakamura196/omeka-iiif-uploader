@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "omeka-iiif-uploader"
+  site-url: "https://nakamura196.github.io/omeka-iiif-uploader"
+  description: ""
+  repo-branch: main
+  repo-url: "https://github.com/nakamura196/omeka-iiif-uploader"
